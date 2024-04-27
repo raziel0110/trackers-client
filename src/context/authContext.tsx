@@ -1,4 +1,4 @@
-import { type ReactNode, createContext, useContext, useState, useEffect, useCallback } from "react";
+import { type ReactNode, createContext, useContext, useState, useEffect } from "react";
 import { LOGIN_URL } from "../api/routes";
 import axios from "axios";
 import Api from "../api/Api";

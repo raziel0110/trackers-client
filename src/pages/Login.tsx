@@ -3,7 +3,6 @@ import './Login.css';
 import Button from "../components/Button";
 import Input from "../components/Input";
 import { useAuth } from "../context/authContext";
-import { useNavigate } from "react-router-dom";
 
 type UserProp = {
   email: string;
@@ -18,8 +17,7 @@ const Login = (): ReactElement => {
   });
 
   const isDisabled = loading || !(userInputs.email && userInputs.password);
-  const navigate = useNavigate();
-  const {onLogin, authState, error}: any = useAuth();
+  const {onLogin, error}: any = useAuth();
 
   const handleChange = (field: string, value:string): void => {
     setUserInputs((prevInput) => {
